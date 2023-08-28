@@ -1,4 +1,4 @@
-# Variance adjusted t-test for differntial gene expression
+# Variance adjusted t-test for analyzing differential gene expression
 Script used to perform differential expression on data mini-bulk expression data.
 
 The test performed is a variance adjusted t-test between compound treated conditions and negative control conditions. Control samples can be randomized to reduce systemic biases associated with using the same control group for each comparison.
