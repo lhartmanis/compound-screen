@@ -28,24 +28,9 @@ def run_gsea(folder, target_name, background_name, sig_test, chip_type):
             if not os.path.exists(save_folder):
                 os.mkdir(save_folder)
 
-            if chip_type == 'nosplit_peaks':
-                chipfile = f"/mnt/davidson/danielr/results/features_of_genes/human_more_K562/K562_chipseq_{region}_peaks_to_GRCh38.95.chr.ensembl.txt"
-
-            elif chip_type == 'peaks':
-                chipfile = f"/mnt/davidson/danielr/results/features_of_genes/human_proximalsplit_K562/K562_chipseq_{region}_peaks_to_GRCh38.95.chr.ensembl.txt"
-
-            elif chip_type == 'normed_reads':
-                chipfile = f"/mnt/davidson/danielr/results/features_of_genes/normreads_bgadj_K562/adddivide_dowstreamctrl_K562_chipseq_{region}_RPKMs_to_GRCh38.95.chr.ensembl.txt"
-
-            elif chip_type == "filtered_peaks":
-                chipfile = f"/mnt/davidson/danielr/work/features_of_genes/max1IDR_K562_chipseq/{region}.txt"
-
-            elif chip_type == "leofilt_3":
-                chipfile = f"/home/leoh/filtered_GSEA_peaks/neglogqval3_K562_chipseq/{region}.txt"
-
-            elif chip_type == "leofilt_4":
-                chipfile = f"/home/leoh/filtered_GSEA_peaks/neglogqval4_K562_chipseq/{region}.txt"
-
+            if chip_type == "filtered_peaks":
+                chipfile = f"/compound-screen/tf_enrichment/chip_data/{region}.txt"
+                
             else:
                 print("Could not recognize ChIP file. Exiting...")
                 sys.exit()
@@ -68,7 +53,7 @@ if __name__ == "__main__":
     parser.add_argument('-p', '--processes', type = int, help = 'Number of concurrent processes to utilize')
     parser.add_argument('--target_name', type = str, help = 'Name of target gene list. Default is target.txt', default = "target.txt")
     parser.add_argument('--background_name', type = str, help = 'Name of background gene list. Default is background.txt', default = "background.txt")
-    parser.add_argument('-c', '--chip_type', type = str, help = "Decide what ChIP-data to use. Implemented files are: [normed_reads/ peaks/ nosplit_peaks/ filtered_peaks/ leofilt_3/ leofilt_4]. Default is peaks", default = 'peaks')
+    parser.add_argument('-c', '--chip_type', type = str, help = "Decide what ChIP-data to use. Implemented files are: [filtered_peaks]. Default is filtered_peaks", default = 'filtered_peaks')
     parser.add_argument('-s', '--sig_test', type = str, help = "Decide which significance test to use. Implemented tests are: [Ksamp_AndersonDarling/ Wilcoxon_ranksums]. Default is Wilcoxon ranksums", default = "Wilcoxon_ranksums")
     args = parser.parse_args()
 
