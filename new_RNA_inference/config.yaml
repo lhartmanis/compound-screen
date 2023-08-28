@@ -1,6 +1,6 @@
 conversion_count_settings:
-    bam: "/mnt/gauss/storage1/home/hendgert/data/compoundScreen/bulk/exp2/compound_bulk_exp2.filtered.Aligned.GeneTagged.sorted.bam" # Path to input bam file.
-    gtf: "/mnt/gauss/storage1/home/hendgert/resources/annotations/human/Homo_sapiens.GRCh38.95.chr.gtf" # Path to GTF file, should be the same as the one used to generate the input bam file
+    bam: "" # Path to input bam file. Can be downloaded from ArrayExpress.
+    gtf: "" # Path to GTF file, should be the same as the one used to generate the input bam file
     name: "exp2" # Prefix for file names
     procs: 30  # Number of concurrent processes
     cutoff: 100000 # Number of reads per cell to use for calculating cell stats. Default: 100000
