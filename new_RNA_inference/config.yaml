@@ -6,7 +6,7 @@ conversion_count_settings:
     cutoff: 100000 # Number of reads per cell to use for calculating cell stats. Default: 100000
     qual: 30 # Quality cutoff
     sub: 1.0 # Float for subsampling of data
-    bc: "test_data/indicesUsed.txt" # Path to list of barcodes to use
+    bc: "data/indices_used.txt" # Path to list of barcodes to use
     pc_calc: 'pc' # Can be pc or no_pc
     seq_layout: 'paired_end' # can be single_end or paired_end
     
