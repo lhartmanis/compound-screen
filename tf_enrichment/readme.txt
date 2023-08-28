@@ -1,1 +1,2 @@
-Contains scripts and data for analyzing and plotting transcription factor binding enrichment
+Contains scripts and data for analyzing and plotting transcription factor binding enrichment.
+Data files containing ChIP-seq data needs to be unzipped before the pipeline can be run
