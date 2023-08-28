@@ -13,7 +13,6 @@ matplotlib
 seaborn
 sklearn
 statsmodels
-
 ```
 
 ## Usage
