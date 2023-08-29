@@ -1,5 +1,5 @@
 # compound-screen
-Contains code and analysis scripts for inferring fraction of new RNA from NASC-seq2 styled bulk experiments and analyzing gene expression patterns in new RNA. All expression data related to this project can be found at ArrayExpress with accession code **E-MTAB-13091**
+Contains code and analysis scripts for inferring fraction of new RNA from NASC-seq2 styled bulk experiments and analyzing gene expression patterns in new RNA. All expression data and raw sequencing files related to this project can be found at ArrayExpress with accession code **E-MTAB-13091**
 
 ### Dependencies
 ```
