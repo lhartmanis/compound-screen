@@ -12,6 +12,7 @@ scipy (v1.6.3)
 tensorflow (v2.6.0)
 tensorflow_probability (v0.14.0)
 ```
+Data processing for a typical experiment follows the following steps:
 
 ### 1) Infer fraction new RNA
 New RNA gets inferred per gene and condition using a Bayesian Markov chain Monte Carlo (MCMC) inference engine as described in *link to publication*.
