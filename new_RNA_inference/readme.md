@@ -15,7 +15,7 @@ CPU: AMD Ryzen Threadripper 3960X, 24 core 48 threads
 GPU: NVIDIA GeForce GTX 1080 Ti
 Memory: 256 GB 
 
-NVIDIA drivers:
+Drivers:
 Driver Version: 470.57.02
 CUDA Version: 11.4 
 ```
@@ -30,7 +30,7 @@ This step counts the number of observed mismatches to the reference genome obser
 
 #### Input
 Configuration file in yaml-format.
-Conversion counting starts from an aligned BAM-file. An example of how to generate one from raw sequencing data is found in `path_to_file`.
+Conversion counting starts from an aligned BAM-file. An example of how to generate one from fastq files is found in `path_to_file`.
 
 The supplied BAM file needs to contain read tags for genes and condition barcodes. By default, the pipeline looks for the gene tags `GE` and `GI` and barcode tag `BC`.
 
@@ -48,9 +48,11 @@ This step combines the output from the previous step into the file that will be 
 Path to directory where the output from the previous step is stored. By default `./data`
 
 #### Output
-`combined_results.txt.gz`
-`combined_results.txt.gz.tbi`
-`total_comparisons.txt`
+```
+combined_results.txt.gz
+combined_results.txt.gz.tbi
+total_comparisons.txt
+```
 
 ### 3) Inference of $\pi_g$, the fraction of new RNA per gene in a treatment
 ### 4) Collection of outdata and optional removal of intermediary folders
