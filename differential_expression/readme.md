@@ -18,7 +18,7 @@ statsmodels
 
 ## Usage
 
-`variance_adjusted_ttest_modified.py [-h] -i INDATA_PATH -m META_PATH -o OUTFOLDER -r RNA_TYPE
+`variance_adjusted_ttest.py [-h] -i INDATA_PATH -m META_PATH -o OUTFOLDER -r RNA_TYPE
 [-e EQUAL_VARIANCE] 
 [-l LABEL_TIME] 
 [-c COMPOUND_TIME] [-p PSEUDOCOUNT] [-v VAR_CORRECTION_TYPE] [-t TEST_DICT_PATH]
