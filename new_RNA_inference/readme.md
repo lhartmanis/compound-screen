@@ -81,8 +81,6 @@ Results folders from _step 3_
 #### Output
 `pi_g_df.txt.gz`
 
-The resulting $\pi_g$ matrix contains the fraction of new RNA inferred per gene in each condition. Multiplying this with an expression matrix generates new RNA expression levels.
-
-How to combine it with expression data to obtain new RNA expression levels can be found in the jupyter notebook XYZ (link to it!)
+The resulting $\pi_g$ matrix contains the fraction of new RNA inferred per gene in each condition. Multiplying this with an expression matrix generates new RNA expression levels, as shown in the following [example notebook](https://github.com/lhartmanis/compound-screen/blob/main/examples/perform_qc_and_separate_expression_matrices.ipynb) 
 
 
