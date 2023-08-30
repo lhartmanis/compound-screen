@@ -12,11 +12,14 @@ Average runtime will depend on the available hardware.
 
 The pipeline has been benchmarked on a desktop computer with the following specs:
 ```
+Hardware:
 CPU: AMD Ryzen Threadripper 3960X, 24 core 48 threads
 GPU: NVIDIA GeForce GTX 1080 Ti
 Memory: 256 GB 
 
 NVIDIA drivers:
+Driver Version: 470.57.02
+CUDA Version: 11.4 
 ```
 
 Processing data from a large-scale experiment with 10 million data points, running on 30 parallel processes and performing 10.000 MCMC sinulations per batch finished in 96 hours and each batch required 130 GB RAM. 
