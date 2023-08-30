@@ -49,7 +49,7 @@ The supplied BAM file needs to contain read tags for genes and condition barcode
 `conversionRates.csv` Conversion rates for each base conversion per condition.
 
 ### 2) Combination and indexing of conversion count files
-This step combines the output from the previous step into the file that will be used as input in the following step. The file gets indexed with [tabix](http://www.htslib.org/doc/tabix.html) to allow fast data retreival. This step is carried out by the script `prepare_and_index_indata.py`
+This step combines the output from _step 1_ into the file that will be used as input to step _3_. The file gets indexed with [tabix](http://www.htslib.org/doc/tabix.html) to allow fast data retreival. This step is carried out by the script `prepare_and_index_indata.py`
 
 #### Input
 Path to directory where the output from the previous step is stored. By default `./data`
@@ -70,13 +70,18 @@ This is the slowest part of the pipeline
 `combined_results.txt.gz`
 
 #### Output
+Individual text files for cell and gene
 
-### 4) Collection of outdata and optional removal of intermediary folders
+### 4) Collection of outdata and removal of intermediary folders
+The removal of files is optional
+This step combines the data in each 
 
 #### Input
 
 #### Output
 
 The resulting $\pi_g$ matrix contains the fraction of new RNA inferred per gene in each condition. Multiplying this with an expression matrix generates new RNA expression levels.
+
+How to combine it with expression data to obtain new RNA expression levels can be found in the jupyter notebook XYZ (link to it!)
 
 
