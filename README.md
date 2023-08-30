@@ -27,6 +27,6 @@ This repository contains a stand-alone script for analyzing differential express
 Code and examples of how to analyze differentially expressed genes can be found in the `differential_expression` folder.
 
 ### 3) Transcription factor binding enrichment
-Enrichment or depletion of transcription factor binding in promoters of differentially expressed genes can rovide insights into the biological processes that coordinate the transcriptional response.
+Enrichment or depletion of transcription factor binding in promoters of differentially expressed genes can provide insights into the biological processes that coordinate the transcriptional response.
 
 Code, TF enrichment data, and examples of how to analyze enrichment of transcription factor binding can be found in the `tf_enrichment` folder.
