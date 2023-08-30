@@ -70,6 +70,6 @@ As input, the script uses an expression table, along with a meta data file and s
 
 The output folder contains subfolders with differential expression tables for each separate compound used.
 
-### Example
+## Example
 
 ```python3 variance_adjusted_ttest.py -i new_rpkms.txt -o compound_screen/differential_expression/DE_results -r New -v linear -m compound_screen/differential_expression/meta.txt -l 1hr -c 1hr --subsample_g1 10 --test_dict_path compound-screen/differential_expression/test_dict.json --replicate_column compound_name```
