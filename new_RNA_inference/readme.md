@@ -1,8 +1,12 @@
+# New RNA inference
+
+This folder contains a computational pipeline that infers the fraction of new RNA per gene within a sample.
+
 Describe how to design the yaml and run the pipeline.
 Add a note on runtime and memory usage.
 
 
-The inference script runs in sequantial batches to keep memory usage low. The number of genes to be inferred per batch can be set in the Snakemake configuration file. Processing data using smaller batches requires less memory usage and does not significantly alter the runtime.
+The inference script runs in sequential batches to keep memory usage low. The number of genes to be inferred per batch can be set in the Snakemake configuration file. Processing data using smaller batches requires less memory usage and does not significantly alter the runtime.
 
 Average runtime will depend on the available hardware.
 
