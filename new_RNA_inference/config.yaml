@@ -8,7 +8,7 @@ conversion_count_settings:
     sub: 1.0 # Float for subsampling data
     bc: "data/indices_used.txt" # Path to list of barcodes to use
     pc_calc: 'pc' # Compute conversion probabilities. Allowed values are pc or no_pc
-    seq_layout: 'paired_end' # Sequencing strategy. Allowed values are single_end or paired_end
+    seq_layout: 'paired_end' # Sequencing layout. Allowed values are single_end or paired_end
     
 MCMC_runner_settings:
     num_iters: 10000 # Number of iterations before restarting the inference
