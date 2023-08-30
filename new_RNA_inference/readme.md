@@ -81,6 +81,6 @@ Results folders from _step 3_
 #### Output
 `pi_g_df.txt.gz`
 
-The resulting $\pi_g$ matrix contains the fraction of new RNA inferred per gene in each condition. Multiplying this with an expression matrix generates new RNA expression levels, as shown in the following [example notebook](https://github.com/lhartmanis/compound-screen/blob/main/examples/perform_qc_and_separate_expression_matrices.ipynb) 
+The resulting $\pi_g$ matrix contains the fraction of new RNA inferred per gene in each condition. Multiplying this with an expression matrix generates new RNA expression levels, as shown in this [example notebook](https://github.com/lhartmanis/compound-screen/blob/main/examples/perform_qc_and_separate_expression_matrices.ipynb).
 
 
