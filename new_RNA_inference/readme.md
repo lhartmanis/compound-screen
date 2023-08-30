@@ -22,6 +22,18 @@ CUDA Version: 11.4
 
 Processing data from a large-scale experiment with 10 million data points, running on 30 parallel processes and performing 10.000 MCMC sinulations per batch finished in 96 hours and each batch required 130 GB RAM. 
 
+### Dependencies
+```
+joblib=v1.0.1
+pysam=0.17.0
+gtfparse=v1.2.1
+pandas=1.1.4 
+numpy=1.19.5 
+scipy=1.6.3
+tensorflow=2.6.0
+tensorflow_probability=0.14.0
+```
+
 ## Usage
 Parameters for each step is entered into the `config.yaml` file. An example file can be found at `compound-screen/new_RNA_inference/config.yaml`. Once the yaml file is complete, place it in the desired run directory together with the Snakefile found at `compound-screen/new_RNA_inference/config.yaml`.
 
