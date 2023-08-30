@@ -22,7 +22,7 @@ CUDA Version: 11.4
 
 Processing data from a large-scale experiment with 10 million data points, running on 30 parallel processes and performing 10.000 MCMC sinulations per batch finished in 96 hours and each batch required 130 GB RAM. 
 
-### Dependencies
+## Dependencies
 ```
 joblib=v1.0.1
 pysam=0.17.0
