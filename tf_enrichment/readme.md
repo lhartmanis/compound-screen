@@ -1,10 +1,41 @@
 # Transcription factor binding enrichment 
 
+Intro
 Contains scripts and data for analyzing and plotting transcription factor binding enrichment.
 Data files containing ChIP-seq data needs to be unzipped before the pipeline can be run.
 
-# Usage
 This script is designed to be used for large-scale compmound-screening experiments where cells are treated with many different compounds.
+
+## Dependencies
+
+## Usage
+
+`threaded_enrichment_target_vs_bckg.py -h
+usage: threaded_enrichment_target_vs_bckg.py [-h] [-i INFOLDER] [-p PROCESSES] [--target_name TARGET_NAME] [--background_name BACKGROUND_NAME] [-c CHIP_TYPE] [-s SIG_TEST]`
+
+**arguments**
+```
+ -h, --help            show this help message and exit
+  -i INFOLDER, --infolder INFOLDER
+                        Path to a folder containing GSEA data in one or more subfolders. It is a mess and I need to change it soon.
+  -p PROCESSES, --processes PROCESSES
+                        Number of concurrent processes to utilize
+  --target_name TARGET_NAME
+                        Name of target gene list. Default is target.txt
+  --background_name BACKGROUND_NAME
+                        Name of background gene list. Default is background.txt
+  -c CHIP_TYPE, --chip_type CHIP_TYPE
+                        Decide what ChIP-data to use. Implemented files are: [filtered_peaks]. Default is filtered_peaks
+  -s SIG_TEST, --sig_test SIG_TEST
+                        Decide which significance test to use. Implemented tests are: [Ksamp_AndersonDarling/ Wilcoxon_ranksums]. Default is Wilcoxon ranksums
+```
+
+## Input
+
+## Output
+
+## Example
+`python3 threaded_enrichment_target_vs_bckg.py -i infolder -p 30 --target_name upregulated.txt --background_name downregulated.txt -c filtered_peaks -s Wilcoxon_ranksums`
 
 ### First, a script that writes out gene lists
 - Can be differentially expressed genes, or a set of top ranked upregulated and downregulated genes
