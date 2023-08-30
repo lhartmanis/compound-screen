@@ -25,8 +25,10 @@ CUDA Version: 11.4
 Processing data from a large-scale experiment with 10 million data points, running on 30 parallel processes and performing 10.000 MCMC sinulations per batch finished in 96 hours and each batch required 130 GB RAM. 
 
 ## Usage
-The pipeline consists of four separate steps
+The pipeline consists of four separate steps:
 1) Conversion counting from sequencing data
 2) Combination and indexing of conversion count files
 3) Inference of $\pi_g$, the fraction of new RNA per gene in a treatment
 4) Collection of outdata and optional removal of intermediary folders
+
+Parameters for each step is entered into the `config.yaml` file. An example file can be found at `compound-screen/new_RNA_inference/config.yaml`.
