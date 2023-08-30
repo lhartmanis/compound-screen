@@ -26,10 +26,24 @@ Processing data from a large-scale experiment with 10 million data points, runni
 
 ## Usage
 The pipeline consists of four separate steps:
-1) Conversion counting from sequencing data
-2) Combination and indexing of conversion count files
-3) Inference of $\pi_g$, the fraction of new RNA per gene in a treatment
-4) Collection of outdata and optional removal of intermediary folders
+
+### 1) Conversion counting from sequencing data
+This step counts the number of observed mismatches to the reference genome observed in each sequencing reads and computes conversion and error probabilities. This is performed by the script `stranded_conversion_rates_and_probs.py`
+
+#### Input
+Configuration file in yaml-format.
+Conversion counting starts from an aligned BAM-file. An example of how to generate one from raw sequencing data is found in `path_to_file`.
+
+The supplied BAM file needs to contain read tags for genes and condition barcodes. By default, the pipeline looks for the gene tags `GE` and `GI` and barcode tag `BC`.
+
+#### Output
+
+
+#### 2) Combination and indexing of conversion count files
+This step combines the output from the previous step
+
+#### 3) Inference of $\pi_g$, the fraction of new RNA per gene in a treatment
+#### 4) Collection of outdata and optional removal of intermediary folders
 
 The resulting $\pi_g$ matrix contains the fraction of new RNA inferred per gene in each condition. Multiplying this 
 
