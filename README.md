@@ -3,14 +3,14 @@ This repository contains code and analysis scripts for inferring fraction of new
 
 ### Dependencies
 ```
-joblib (v1.0.1)
-pysam (v0.17.0)
-gtfparse(v1.2.1)
-pandas(v1.1.4) 
-numpy (v1.19.5) 
-scipy (v1.6.3)
-tensorflow (v2.6.0)
-tensorflow_probability (v0.14.0)
+joblib=v1.0.1
+pysam=0.17.0
+gtfparse=v1.2.1
+pandas=1.1.4 
+numpy=1.19.5 
+scipy=1.6.3
+tensorflow=2.6.0
+tensorflow_probability=0.14.0
 ```
 Data processing for a typical experiment follows the steps below. Further information about how to utilize the tools can be found in the respective subfolders.
 
