@@ -3,13 +3,7 @@
 Contains scripts and data for analyzing transcription factor binding enrichment in a target gene set compared to background.
 Data files containing ChIP-seq data needs to be unzipped before the pipeline can be run.
 
-This script is designed to be used for large-scale compound-screening experiments and requires a determined - although not very complicated - directory structure to work. The top directory, further referred to as `infolder`, contains subdirectories for each treatment. Each subdirectory in turn contains two text files for the target and background gene set where each row 
-
-### First, a script that writes out gene lists
-- Can be differentially expressed genes, or a set of top ranked upregulated and downregulated genes
-
-### Second, show how to run the analysis
-- Describe the folder structure needed for the script to run
+This script is designed to be used for large-scale compound-screening experiments and requires a determined - although not very complicated - directory structure to work. The top directory, further referred to as `infolder`, contains subdirectories for each treatment. Each subdirectory in turn contains text files for the target and background gene set where one gene name is written per row.
 
 ## Usage
 
