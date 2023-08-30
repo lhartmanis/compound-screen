@@ -22,3 +22,11 @@ A Snakemake pipeline for inferring fraction of new RNA is provided under `new_RN
 Code and examples of how to run the inference pipeline can be found in the `new_RNA_inference` folder
 
 ### 2) Analyze differentially expressed genes
+This repository contains a stand-alone script for analyzing differential expressed genes.
+
+Code and examples of how to analyze differentially expressed genes can be found in the `differential_expression` folder.
+
+### 3) Transcription factor binding enrichment
+Enrichment or depletion of transcription factor binding in promoters of differentially expressed genes can rovide insights into the biological processes that coordinate the transcriptional response.
+
+Code, TF enrichment data, and examples of how to analyze enrichment of transcription factor binding can be found in the `tf_enrichment` folder.
