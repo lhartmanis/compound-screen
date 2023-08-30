@@ -27,6 +27,6 @@ Processing data from a large-scale experiment with 10 million data points, runni
 ## Usage
 The pipeline consists of four separate steps
 1) Conversion counting from sequencing data
- 2) Combination and indexing of conversion count files
- 3) Inference of $\PI_g$, the fraction of new RNA per gene in a treatment
- 4) Collection of outdata and optional removal of intermediary folders
+2) Combination and indexing of conversion count files
+3) Inference of $\pi_g$, the fraction of new RNA per gene in a treatment
+4) Collection of outdata and optional removal of intermediary folders
