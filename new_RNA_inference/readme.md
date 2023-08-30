@@ -8,8 +8,6 @@ Add a note on runtime and memory usage.
 
 The inference script runs in sequential batches to keep memory usage low. The number of genes to be inferred per batch can be set in the Snakemake configuration file. Processing data using smaller batches requires less memory usage and does not significantly alter the runtime.
 
-Average runtime will depend on the available hardware.
-
 The pipeline has been benchmarked on a desktop computer with the following specs:
 ```
 Hardware:
@@ -37,15 +35,25 @@ Conversion counting starts from an aligned BAM-file. An example of how to genera
 The supplied BAM file needs to contain read tags for genes and condition barcodes. By default, the pipeline looks for the gene tags `GE` and `GI` and barcode tag `BC`.
 
 #### Output
-`Details` file containing XYZ
+`details.txt` Number of observed mismamtches and observed T:s per condition and gene.
 
-`pc_pe` file containing the computed mismatch probabilities
+`pc_pe.txt` Computed mismatch probabilities for each condition.
 
-#### 2) Combination and indexing of conversion count files
-This step combines the output from the previous step
+`conversionRates.csv` Conversion rates for each base conversion per condition.
 
-#### 3) Inference of $\pi_g$, the fraction of new RNA per gene in a treatment
-#### 4) Collection of outdata and optional removal of intermediary folders
+### 2) Combination and indexing of conversion count files
+This step combines the output from the previous step into the file that will be used as input in the following step. The file gets indexed with [tabix](http://www.htslib.org/doc/tabix.html) to allow fast data retreival. This step is carried out by the script `prepare_and_index_indata.py`
+
+#### Input
+Path to directory where the output from the previous step is stored. By default `./data`
+
+#### Output
+`combined_results.txt.gz`
+`combined_results.txt.gz.tbi`
+`total_comparisons.txt`
+
+### 3) Inference of $\pi_g$, the fraction of new RNA per gene in a treatment
+### 4) Collection of outdata and optional removal of intermediary folders
 
 The resulting $\pi_g$ matrix contains the fraction of new RNA inferred per gene in each condition. Multiplying this 
 
