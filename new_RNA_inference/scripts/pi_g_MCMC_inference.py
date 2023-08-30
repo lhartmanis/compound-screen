@@ -68,7 +68,7 @@ def sample_kern(num_steps = 5000, num_burnin_steps = 1000, current_state = None,
 
 def hmc_sampler(log_prob_fn, bijector, line, init_num, outfolder):
     
-    # Data is passed as one line from the combined infile
+    # Data is passed as line-by-line from the combined infile
     data = line.rstrip().decode().split('\t')
     bc, gene = data[2:4]
     p_c, p_e, numreads = data[6:9]
@@ -93,8 +93,6 @@ def hmc_sampler(log_prob_fn, bijector, line, init_num, outfolder):
     if len(conversions) > 5000:
        t_content, conversions = subsample(t_content, conversions, i=5000)
 
-    #print('inferring %s with %i reads ' % (name, len(conversions)))
-
     init_state = tf.constant(init_num, dtype = 'float32')
     unp = lambda pi_g: log_prob_fn(pi_g, conversions, t_content, p_c, p_e)
 
@@ -112,8 +110,8 @@ def hmc_sampler(log_prob_fn, bijector, line, init_num, outfolder):
       inner_kernel=transformed_kernel,
       num_adaptation_steps=int(0.8 * 1000), target_accept_prob=0.65)
 
-    # Sample from the MCMC kernel, number of sampling steps is hard coded to 5000
-    # and burn in steps hard coded to 1000
+    # Sample from the MCMC kernel
+    # Number of sampling steps is hard-coded to 5000 and burn-in steps to 1000
     posterior_pig = sample_kern(num_steps = 5000, num_burnin_steps = 1000,
                                 current_state = init_state, kernel = kernel)
 
@@ -171,4 +169,3 @@ if __name__ == "__main__":
     results = [job.get() for job in tqdm(jobs)]
 
     print("Done with chunk, restarting!")
-
