@@ -23,6 +23,13 @@ CUDA Version: 11.4
 Processing data from a large-scale experiment with 10 million data points, running on 30 parallel processes and performing 10.000 MCMC sinulations per batch finished in 96 hours and each batch required 130 GB RAM. 
 
 ## Usage
+Parameters for each step is entered into the `config.yaml` file. An example file can be found at `compound-screen/new_RNA_inference/config.yaml`. Once the yaml file is complete, place it in the desired run directory together with the Snakefile found at `compound-screen/new_RNA_inference/config.yaml`.
+
+The full pipeline can then easily be started through: 
+
+`snakemake --cores 1`
+
+## Pipeline details
 The pipeline consists of four separate steps:
 
 ### 1) Conversion counting from sequencing data
@@ -54,16 +61,22 @@ combined_results.txt.gz.tbi
 total_comparisons.txt
 ```
 
-### 3) Inference of $\pi_g$, the fraction of new RNA per gene in a treatment
+### 3) Inference of $\pi_g$ - the fraction new RNA per gene in a treatment
+This is where the rubber hits the road. Starting from the `combined_results` file generated previously, this step infers the fraction of new RNA per gene and condition using an MCMC sampling algorithm. To reduce the amount of RAM needed by the algorithm, it is run in sequential batches processing a set number of genes per iteration before restarting with the next data chunk. The task of handling the automated restart is performed by the script `runner_script.py`, and the inference is performed by the script `pi_g_inference.py`.
+
+This is the slowest part of the pipeline
+
+#### Input
+`combined_results.txt.gz`
+
+#### Output
+
 ### 4) Collection of outdata and optional removal of intermediary folders
 
-The resulting $\pi_g$ matrix contains the fraction of new RNA inferred per gene in each condition. Multiplying this 
+#### Input
 
-Parameters for each step is entered into the `config.yaml` file. An example file can be found at `compound-screen/new_RNA_inference/config.yaml`. Once the yaml file is complete, place it in the desired run directory together with the Snakefile found at `compound-screen/new_RNA_inference/config.yaml`.
+#### Output
 
-The full pipeline can then easily be started through: 
+The resulting $\pi_g$ matrix contains the fraction of new RNA inferred per gene in each condition. Multiplying this with an expression matrix generates new RNA expression levels.
 
-`snakemake --cores 1`
-
-## Output
 
