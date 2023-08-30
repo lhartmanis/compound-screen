@@ -1,6 +1,3 @@
-# author: Leonard Hartmanis
-# leonard.hartmanis@ki.se
-
 import argparse
 import os
 import pandas as pd
