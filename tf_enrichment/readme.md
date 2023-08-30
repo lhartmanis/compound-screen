@@ -14,8 +14,7 @@ This script is designed to be used for large-scale compmound-screening experimen
 
 ## Usage
 
-`threaded_enrichment_target_vs_bckg.py -h
-usage: threaded_enrichment_target_vs_bckg.py [-h] [-i INFOLDER] [-p PROCESSES] [--target_name TARGET_NAME] [--background_name BACKGROUND_NAME] [-c CHIP_TYPE] [-s SIG_TEST]`
+`threaded_enrichment_target_vs_bckg.py [-h] [-i INFOLDER] [-p PROCESSES] [--target_name TARGET_NAME] [--background_name BACKGROUND_NAME] [-c CHIP_TYPE] [-s SIG_TEST]`
 
 **arguments**
 ```
