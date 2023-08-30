@@ -1,5 +1,5 @@
 # compound-screen
-Contains code and analysis scripts for inferring fraction of new RNA from NASC-seq2 styled bulk experiments and analyzing gene expression patterns in new RNA. All expression data and raw sequencing files related to this project can be found at ArrayExpress with accession code **E-MTAB-13091**.
+This repository contains code and analysis scripts for inferring fraction of new RNA from NASC-seq2 styled bulk experiments and analyzing gene expression patterns in newly transcribed RNA. All expression data and raw sequencing files related to this project can be found at ArrayExpress with accession code **E-MTAB-13091**.
 
 ### Dependencies
 ```
@@ -12,7 +12,7 @@ scipy (v1.6.3)
 tensorflow (v2.6.0)
 tensorflow_probability (v0.14.0)
 ```
-Data processing for a typical experiment follows the following steps:
+Data processing for a typical experiment follows the steps below. Each folder contains further information about how to utilize the tools.
 
 ### 1) Infer fraction new RNA
 New RNA gets inferred per gene-wise per treatment condition using a Bayesian Markov chain Monte Carlo (MCMC) inference engine as described in *link to publication*.
