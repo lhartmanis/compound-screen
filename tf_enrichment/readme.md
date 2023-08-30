@@ -1,7 +1,7 @@
 # Transcription factor binding enrichment 
 
 Contains scripts and data for analyzing and plotting transcription factor binding enrichment.
-Data files containing ChIP-seq data needs to be unzipped before the pipeline can be run
+Data files containing ChIP-seq data needs to be unzipped before the pipeline can be run. Peaks were downloaded from ENCODE release X.Y.Z and filtered in a manner of such and such.
 
 ### First, a script that writes out gene lists
 - Can be differentially expressed genes, or a set of top ranked upregulated and downregulated genes
