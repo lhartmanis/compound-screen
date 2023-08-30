@@ -70,15 +70,16 @@ This is the slowest part of the pipeline
 `combined_results.txt.gz`
 
 #### Output
-Individual text files for cell and gene
+Individual text files are generated for each inference (treatnent-gene pair). The files contain the most likely inferred $\pi_g$ value as well as the 95% credible interval of the inference along with the number of reads used in the inference.
 
 ### 4) Collection of outdata and removal of intermediary folders
-The removal of files is optional
-This step combines the data in each 
+This step combines the data from each file in _step 3_ into a combined output dataframe
 
 #### Input
+Results folders from _step 3_
 
 #### Output
+`pi_g_df.txt.gz`
 
 The resulting $\pi_g$ matrix contains the fraction of new RNA inferred per gene in each condition. Multiplying this with an expression matrix generates new RNA expression levels.
 
