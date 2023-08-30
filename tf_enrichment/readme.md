@@ -6,7 +6,11 @@ Data files containing ChIP-seq data needs to be unzipped before the pipeline can
 
 This script is designed to be used for large-scale compmound-screening experiments where cells are treated with many different compounds.
 
-## Dependencies
+### First, a script that writes out gene lists
+- Can be differentially expressed genes, or a set of top ranked upregulated and downregulated genes
+
+### Second, show how to run the analysis
+- Describe the folder structure needed for the script to run
 
 ## Usage
 
@@ -37,11 +41,3 @@ usage: threaded_enrichment_target_vs_bckg.py [-h] [-i INFOLDER] [-p PROCESSES] [
 ## Example
 `python3 threaded_enrichment_target_vs_bckg.py -i infolder -p 30 --target_name upregulated.txt --background_name downregulated.txt -c filtered_peaks -s Wilcoxon_ranksums`
 
-### First, a script that writes out gene lists
-- Can be differentially expressed genes, or a set of top ranked upregulated and downregulated genes
-
-### Second, show how to run the analysis
-- Describe the folder structure needed for the script to run
-
-### Insert example of how to run this analysis
-- Python oneliner
