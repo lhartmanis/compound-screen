@@ -35,8 +35,21 @@ usage: threaded_enrichment_target_vs_bckg.py [-h] [-i INFOLDER] [-p PROCESSES] [
 ```
 
 ## Input
+Starting from `infolder`, each treatment will have its own subdirectory wherein two gene lists are saved as text files with gene names on each row.
 
 ## Output
+Output folders contain enrichment of transcription factor binding in each of eight genomic regions for each treatment
+
+```
+upstream
+upstreamproximal
+downstreamproximal
+promoter
+genebody
+polyAsite
+proximal
+downstreamctrl
+```
 
 ## Example
 `python3 threaded_enrichment_target_vs_bckg.py -i infolder -p 30 --target_name upregulated.txt --background_name downregulated.txt -c filtered_peaks -s Wilcoxon_ranksums`
