@@ -25,13 +25,8 @@ if __name__ == "__main__":
 
     while files_computed < total_comparisons:
         last_index = first_index + iters
-
-        # This command shall accept a starting index and number of files to be processed in a run.
-        # The starting index fot the first time around is zero, next time it is the stop index of the last run. 
-
-        # Working on it in another tab
         cmd = f'python3 scripts/pi_g_MCMC_inference.py -d ./data -p {procs} -n {iters} -o {outfolder} -s {first_index} -e {last_index}'
-        
+       
         try:
             subprocess.call(cmd, shell=True)
         except BrokenPipeError:
@@ -52,4 +47,3 @@ if __name__ == "__main__":
             os.mkdir(os.path.join(outfolder, 'pi_g_results'))
             
             folder_idx += 1
-
