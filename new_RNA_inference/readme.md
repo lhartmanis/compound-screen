@@ -28,7 +28,7 @@ Processing data from a large-scale experiment with 10 million data points, runni
 The pipeline consists of four separate steps:
 
 ### 1) Conversion counting from sequencing data
-This step counts the number of observed mismatches to the reference genome observed in each sequencing reads and computes conversion and error probabilities. This is performed by the script `stranded_conversion_rates_and_probs.py`
+This step counts the number of observed mismatches to the reference genome observed in each sequencing read and computes probabilities of errors and specific conversions. This is performed by the script `stranded_conversion_rates_and_probs.py`
 
 #### Input
 Configuration file in yaml-format.
@@ -37,7 +37,9 @@ Conversion counting starts from an aligned BAM-file. An example of how to genera
 The supplied BAM file needs to contain read tags for genes and condition barcodes. By default, the pipeline looks for the gene tags `GE` and `GI` and barcode tag `BC`.
 
 #### Output
+`Details` file containing XYZ
 
+`pc_pe` file containing the computed mismatch probabilities
 
 #### 2) Combination and indexing of conversion count files
 This step combines the output from the previous step
