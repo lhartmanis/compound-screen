@@ -31,4 +31,8 @@ The pipeline consists of four separate steps:
 3) Inference of $\pi_g$, the fraction of new RNA per gene in a treatment
 4) Collection of outdata and optional removal of intermediary folders
 
-Parameters for each step is entered into the `config.yaml` file. An example file can be found at `compound-screen/new_RNA_inference/config.yaml`.
+The resulting $\pi_g$ matrix contains the fraction of new RNA inferred per gene in each condition. Multiplying this 
+
+Parameters for each step is entered into the `config.yaml` file. An example file can be found at `compound-screen/new_RNA_inference/config.yaml`. Once the yaml file is complete, place it in the desired run directory together with the Snakefile found at `compound-screen/new_RNA_inference/config.yaml`. The full pipeline is then started with the following command: 
+
+`snakemake --cores 1`
