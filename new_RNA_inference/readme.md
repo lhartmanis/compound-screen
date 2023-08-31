@@ -39,7 +39,7 @@ Parameters for each step is entered into the `config.yaml` file. An example file
 
 The full pipeline can then easily be started through: 
 
-`snakemake --cores 1`
+`snakemake --cores 10`
 
 ## Pipeline details
 The pipeline consists of four separate steps:
