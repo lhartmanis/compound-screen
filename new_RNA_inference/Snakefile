@@ -4,7 +4,7 @@ resource_scopes:
     gpus="local"
 
 rule all:
-    input: "data/infer_pig.done"
+    input: "data/cleanup.done"
 
 rule count_conversions:
     input:
@@ -59,4 +59,4 @@ rule collect_data_and_cleanup:
     output:
         touch("data/cleanup.done")
     shell:
-        "python3 scripts/collect_data.py -d {base_path} -p {num_procs} -f {handle_folders}"
+        "python3 scripts/collect_data.py -d {params.base_path} -p {params.num_procs} -f {params.handle_folders}"
